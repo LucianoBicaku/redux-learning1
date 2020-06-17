@@ -9,6 +9,9 @@ const FavouritesReducer = (state = [{
     switch (action.type) {
         case 'ADD_FAVOURITE':
             return [...state, action.newItem];
+
+        case 'REMOVE_FAVOURITE':
+            return state.filter(item => JSON.stringify(item) !== JSON.stringify(action.newItem))
         default:
             return state;
     }
