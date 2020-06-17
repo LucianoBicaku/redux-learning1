@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { addFavourite } from '../actions'
+
+import Favourites from './Favourites'
+
 export default function Recipies() {
 
     const [data, setData] = useState([]);
@@ -26,6 +29,7 @@ export default function Recipies() {
                     }}>Add</button>
                 </div>
             ))}
+            <Favourites />
         </>
     );
 }
